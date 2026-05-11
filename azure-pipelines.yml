@@ -4,10 +4,16 @@ pool:
   name: ALZ-AgentPool
 
 steps:
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'ALZ-ServiceConnection'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      az account show
+
+- script: echo "Hello Surendra, Azure DevOps Pipeline Working Fine!"
+  displayName: 'Print Message'
+
+- script: |
+    echo "Checking Terraform Version"
+    terraform version
+  displayName: 'Terraform Version Check'
+
+- script: |
+    echo "Listing Files"
+    ls -la
+  displayName: 'List Files'
