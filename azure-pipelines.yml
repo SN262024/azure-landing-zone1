@@ -15,5 +15,5 @@ steps:
 
 - script: |
     echo "Listing Files"
-    ls -la
+    dir
   displayName: 'List Files'
