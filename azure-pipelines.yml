@@ -1,0 +1,13 @@
+trigger: none
+
+pool:
+  name: ALZ-AgentPool
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'ALZ-ServiceConnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az account show
